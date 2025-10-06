@@ -1,0 +1,6 @@
+{
+    "parent": "simplymore:template_great_spear",
+    "attributes": {
+        "range_bonus": 3.0
+    }
+}

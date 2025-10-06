@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "simplymore",
+  "version": "${version}",
+  "name": "Simply More",
+  "description": "An addon to Simply Swords which adds even more weapons variety and new uniques!",
+  "authors": [
+    "RosemaryThyme - (Code + Art)",
+    "NotSaneAshley - (Art)",
+    "ScootifyZ - (Art)",
+    "chronosacaria - (Code Review)"
+  ],
+  "contact": {
+    "sources": "https://github.com/jay-jay0101/Simply-More/tree/main"
+  },
+  "license": "All Rights Reserved",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "accessWidener": "simplymore.accesswidener",
+  "entrypoints": {
+    "main": [
+      "net.rosemarythyme.simplymore.fabric.SimplyMoreFabric"
+    ],
+    "client": [
+      "net.rosemarythyme.simplymore.fabric.SimplyMoreFabricClient"
+    ]
+  },
+  "mixins": [
+    "simplymore.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.21.1 <=1.21.1",
+    "architectury": ">=7.1.0",
+    "fzzy_config": ">=0.6.6",
+    "simplyswords": ">=1.62.0-1.21.1"
+  },
+  "suggests": {
+  }
+}

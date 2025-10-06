@@ -1,7 +1,0 @@
-{
-  "parent": "simplymore:item/template/khopesh",
-  "textures": {
-    "layer0": "simplymore:item/uniques/scarab_roller/scarab_roller",
-    "layer1": "simplymore:item/uniques/scarab_roller/wings"
-  }
-}

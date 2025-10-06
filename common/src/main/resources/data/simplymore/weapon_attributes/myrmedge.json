@@ -1,0 +1,8 @@
+{
+    "parent": "simplymore:template_khopesh",
+    "attributes": {
+        "two_handed": false,
+        "category": "sword",
+        "range_bonus": 0.4
+    }
+}

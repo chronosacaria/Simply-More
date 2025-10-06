@@ -1,0 +1,7 @@
+{
+    "parent": "bettercombat:sickle",
+    "attributes": {
+        "category": "sickle",
+        "range_bonus": 0.0
+    }
+}

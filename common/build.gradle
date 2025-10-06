@@ -1,0 +1,44 @@
+architectury {
+    common rootProject.enabled_platforms.split(',')
+}
+
+dependencies {
+    // We depend on Fabric Loader here to use the Fabric @Environment annotations,
+    // which get remapped to the correct annotations on each platform.
+    // Do NOT use other classes from Fabric Loader.
+    modImplementation "net.fabricmc:fabric-loader:$project.fabric_loader_version"
+
+    // Architectury API. This is optional, and you can comment it out if you don't need it.
+    modImplementation "dev.architectury:architectury:$project.architectury_api_version"
+
+
+    modImplementation("curse.maven:simplyswords-659887:${simplyswords_fabric_version}")
+    modImplementation "me.fzzyhmstrs:fzzy_config:${project.fzzy_config_version}"
+
+    modCompileOnly "maven.modrinth:mythicmetals:${project.mythicmetals_version}"
+    modCompileOnly("com.terraformersmc:modmenu:${project.mod_menu_version}") { transitive false }
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/simplymore.accesswidener")
+}
+
+repositories {
+    maven {
+        url "https://cursemaven.com"
+    }
+    maven {
+        name = "FzzyMaven"
+        url = uri("https://maven.fzzyhmstrs.me/")
+    }
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+    maven { url = "https://jitpack.io" }
+    maven { url "https://maven.shedaniel.me/" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
+}
